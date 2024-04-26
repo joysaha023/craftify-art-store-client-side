@@ -1,5 +1,5 @@
 import React from "react";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const AllartandCraft = () => {
   const allItems = useLoaderData();
@@ -33,9 +33,9 @@ const AllartandCraft = () => {
                 <td>{item.stock_status}</td>
                 <td>{item.processing_time}</td>
                 <td>
-                  <button className="btn btn-sm btn-accent text-white rounded-full">
+                  <Link to={`/details/${item._id}`} className="btn btn-sm btn-accent text-white rounded-full">
                     View Details
-                  </button>
+                  </Link>
                 </td>
               </tr>
             ))}
