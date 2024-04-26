@@ -3,6 +3,8 @@ import Root from "../Layouts/Root";
 import Home from "../Pages/Home/Home";
 import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AllartandCraft from "../Pages/AllartandCraft/AllartandCraft";
+import AddartandCraft from "../Pages/AddartandCraft/AddartandCraft";
+import MyartandCraft from "../Pages/MyartandCraft/MyartandCraft";
 
 
 const router = createBrowserRouter([
@@ -18,6 +20,14 @@ const router = createBrowserRouter([
         {
             path: "/allartandcraft",
             element: <AllartandCraft></AllartandCraft>
+        },
+        {
+            path: "/addartandcraft",
+            element: <AddartandCraft></AddartandCraft>
+        },
+        {
+            path: "/myartandcraft",
+            element: <MyartandCraft></MyartandCraft>
         }
     ]
   },

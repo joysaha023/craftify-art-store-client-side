@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -8,16 +8,24 @@ const Navbar = () => {
     const linkNav = (
         <>
             <li>
-              <Link to={"/"}>Home</Link>
+              <NavLink to={"/"} className={({isActive}) =>
+               isActive ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline" : "font-medium"
+              }>Home</NavLink>
             </li>
             <li>
-              <Link to={"/allartandcraft"}>All Art & Craft</Link>
+              <NavLink to={"/allartandcraft"} className={({isActive}) =>
+               isActive ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline" : "font-medium"
+              }>All Art & Craft</NavLink>
             </li>
             <li>
-              <a>Add Art & Craft</a>
+              <NavLink to={"/addartandcraft"} className={({isActive}) =>
+               isActive ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline" : "font-medium"
+              }>Add Art & Craft</NavLink>
             </li>
             <li>
-              <a>My Art & Craft</a>
+              <NavLink to={"/myartandcraft"} className={({isActive}) =>
+               isActive ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline" : "font-medium"
+              }>My Art & Craft</NavLink>
             </li>
         </>
     )
@@ -50,7 +58,7 @@ const Navbar = () => {
              {linkNav}
             </ul>
           </div>
-          <a className="btn btn-ghost  text-xl">Craftify</a>
+          <a className="btn btn-ghost  text-xl">CraftiFY</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
