@@ -1,7 +1,7 @@
 import React from "react";
 import Slider from "../../Components/Slider/Slider";
 import CraftItemSec from "../../Components/CraftItemSec/CraftItemSec";
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import CraftitemCard from "../../CraftitemCard/CraftitemCard";
 
 const Home = () => {
@@ -21,10 +21,13 @@ const Home = () => {
             show it's a public.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-          {itemdata.map((item) => (
+        <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {itemdata.slice(0, 6).map((item) => (
             <CraftitemCard key={item._id} item={item}></CraftitemCard>
           ))}
+        </div>
+        <div className="text-center my-6">
+            <Link to={'/allartandcraft'} className="btn btn-accent">View More</Link>
         </div>
       </div>
     </div>
