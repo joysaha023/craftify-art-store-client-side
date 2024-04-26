@@ -58,15 +58,16 @@ const Navbar = () => {
              {linkNav}
             </ul>
           </div>
-          <a className="btn btn-ghost  text-xl">CraftiFY</a>
+          <Link to={"/"} className="btn btn-ghost  text-xl">CraftiFY</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             {linkNav}
           </ul>
         </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
+        <div className="navbar-end gap-4">
+          <Link to={"/login"} className="btn btn-sm md:btn-md rounded-full btn-primary">Log In</Link>
+          <Link to={"/signup"} className="btn hidden btn-sm md:flex md:btn-md rounded-full btn-accent">Sign Up</Link>
         </div>
       </div>
     </div>

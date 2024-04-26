@@ -5,6 +5,8 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import AllartandCraft from "../Pages/AllartandCraft/AllartandCraft";
 import AddartandCraft from "../Pages/AddartandCraft/AddartandCraft";
 import MyartandCraft from "../Pages/MyartandCraft/MyartandCraft";
+import SignUp from "../Pages/SignUp/SignUp"
+import LogIn from "../Pages/LogIn/LogIn";
 
 
 const router = createBrowserRouter([
@@ -28,6 +30,14 @@ const router = createBrowserRouter([
         {
             path: "/myartandcraft",
             element: <MyartandCraft></MyartandCraft>
+        },
+        {
+            path: "/signup",
+            element: <SignUp></SignUp>
+        },
+        {
+            path: "/login",
+            element: <LogIn></LogIn>
         }
     ]
   },
