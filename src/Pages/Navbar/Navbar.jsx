@@ -19,7 +19,7 @@ const Navbar = () => {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -31,7 +31,7 @@ const Navbar = () => {
           to={"/allartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -43,7 +43,7 @@ const Navbar = () => {
           to={"/addartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -55,7 +55,7 @@ const Navbar = () => {
           to={"/myartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#0077be] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -88,7 +88,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[20] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {linkNav}
             </ul>
@@ -142,7 +142,7 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <Link
                 to={"/login"}
-                className="btn btn-sm md:btn-md rounded-full btn-primary"
+                className="btn btn-sm md:btn-md rounded-full bg-[#5F9EA0]"
               >
                 Log In
               </Link>
