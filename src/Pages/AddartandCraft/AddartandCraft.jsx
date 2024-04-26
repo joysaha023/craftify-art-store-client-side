@@ -19,11 +19,23 @@ const AddartandCraft = () => {
     const user_name = form.user_name.value;
     const itemData = {image, item_name, subcategory_Name, description, price, rating, customization, processing_time, stock_status, user_email, user_name}
     console.log(itemData)
+
+    fetch('http://localhost:5000/craftitems', {
+        method: 'POST',
+        headers: {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify(itemData)
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+    })
   }
 
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto px-2">
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">
           Add Your Art & Craft Item
