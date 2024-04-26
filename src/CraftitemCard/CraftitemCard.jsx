@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CraftitemCard = ({ item }) => {
-    const {image, item_name, subcategory_Name, description, price, rating, customization, processing_time, stock_status, user_email, user_name} = item;
+    const {image, _id, item_name, subcategory_Name, description, price, rating, customization, processing_time, stock_status, user_email, user_name} = item;
   return (
     <div>
       <div className="card w-full bg-base-100 shadow-xl">
@@ -18,7 +19,7 @@ const CraftitemCard = ({ item }) => {
           <p>Price: ${price}</p>
           <p>Rating: {rating}</p>
           <div className="card-actions justify-end">
-            <button className="btn btn-primary">View Details</button>
+            <Link to={`/details/${_id}`} className="btn btn-primary">View Details</Link>
           </div>
         </div>
       </div>

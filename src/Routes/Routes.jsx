@@ -7,6 +7,7 @@ import AddartandCraft from "../Pages/AddartandCraft/AddartandCraft";
 import MyartandCraft from "../Pages/MyartandCraft/MyartandCraft";
 import SignUp from "../Pages/SignUp/SignUp"
 import LogIn from "../Pages/LogIn/LogIn";
+import DetailsPage from "../Components/DetailsPage/DetailsPage";
 
 
 
@@ -44,7 +45,10 @@ const router = createBrowserRouter([
             path: "/login",
             element: <LogIn></LogIn>
         },
-        
+        {
+            path: "/details/:id",
+            element: <DetailsPage></DetailsPage>
+        }
     ]
   },
 ]);
