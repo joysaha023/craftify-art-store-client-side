@@ -1,6 +1,5 @@
 import React from "react";
 import Slider from "../../Components/Slider/Slider";
-import CraftItemSec from "../../Components/CraftItemSec/CraftItemSec";
 import { Link, useLoaderData } from "react-router-dom";
 import CraftitemCard from "../../CraftitemCard/CraftitemCard";
 

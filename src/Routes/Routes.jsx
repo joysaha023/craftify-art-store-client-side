@@ -7,7 +7,7 @@ import AddartandCraft from "../Pages/AddartandCraft/AddartandCraft";
 import MyartandCraft from "../Pages/MyartandCraft/MyartandCraft";
 import SignUp from "../Pages/SignUp/SignUp"
 import LogIn from "../Pages/LogIn/LogIn";
-import CraftItemSec from "../Components/CraftItemSec/CraftItemSec";
+
 
 
 
@@ -44,11 +44,7 @@ const router = createBrowserRouter([
             path: "/login",
             element: <LogIn></LogIn>
         },
-        {
-            path: "/craftitemsec",
-            element: <CraftItemSec></CraftItemSec>,
-            
-        }
+        
     ]
   },
 ]);
