@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const LogIn = () => {
+    const {SignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const {
         register,
@@ -14,16 +16,15 @@ const LogIn = () => {
 
     const onSubmit = (data) => {
         const {email, password} = data;
-        console.log(email, password)
-        // //sign in 
-        // SignIn(email, password)
-        // .then(result => {
-        //   toast.success("Login Successfully")
-        //   navigate(location?.state ? location.state: '/')
-        // })
-        // .catch(error => {
-        //   toast.warning("incorrect password")
-        // })
+        // console.log(email, password)
+        //sign in 
+        SignIn(email, password)
+        .then(result => {
+          console.log(result.user)
+        })
+        .catch(error => {
+          console.log(error)
+        })
     
       };
 

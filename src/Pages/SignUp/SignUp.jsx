@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
-import { FaRegEye, FaRegEyeSlash, FaRegKeyboard } from "react-icons/fa6";
+import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import useAuth from "../../Hooks/useAuth";
 
 const SignUp = () => {
+    const {createUser} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
 
@@ -32,19 +34,14 @@ const SignUp = () => {
           return;
         }
         
-        //create user
-        // createUser(email, password)
-        //   .then((result) => {
-        //     updateUserProfile(fullName, image)
-        //     .then(() => {
-        //       toast.success("Registration Successfully")
-        //       logOut();
-        //       navigate('/login')
-        //     })
-        //   })
-        //   .catch((error) => {
-        //     toast.error("Email is already exist")
-        //   });
+        // create user
+        createUser(email, password)
+          .then((result) => {
+            console.log(result.user)
+          })
+          .catch((error) => {
+            console.log(error)
+          });
       };
     
 
