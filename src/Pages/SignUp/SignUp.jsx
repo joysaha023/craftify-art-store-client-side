@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const SignUp = () => {
     const {createUser} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
+    const navigate = useNavigate();
 
     const {
       register,
@@ -38,6 +39,7 @@ const SignUp = () => {
         createUser(email, password)
           .then((result) => {
             console.log(result.user)
+            navigate('/login')
           })
           .catch((error) => {
             console.log(error)

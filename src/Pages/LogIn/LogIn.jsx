@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const LogIn = () => {
     const {SignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+
     const {
         register,
         handleSubmit,
@@ -21,6 +25,7 @@ const LogIn = () => {
         SignIn(email, password)
         .then(result => {
           console.log(result.user)
+          navigate(location?.state ? location.state: '/')
         })
         .catch(error => {
           console.log(error)
