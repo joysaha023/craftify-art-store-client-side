@@ -1,6 +1,8 @@
 import React from "react";
+import useAuth from "../../Hooks/useAuth";
 
 const AddartandCraft = () => {
+const {user} = useAuth();
 
 
   const handleSubmit = (e) => {
@@ -183,6 +185,7 @@ const AddartandCraft = () => {
               <input
                 type="email"
                 id="user_email"
+                defaultValue={user?.email }
                 name="user_email"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
@@ -195,6 +198,7 @@ const AddartandCraft = () => {
               <input
                 type="text"
                 id="user_name"
+                defaultValue={user?.displayName }
                 name="user_name"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
