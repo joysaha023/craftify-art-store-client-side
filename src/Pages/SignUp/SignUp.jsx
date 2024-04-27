@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
+import { toast } from "react-toastify";
 
 const SignUp = () => {
     const {createUser} = useAuth();
@@ -38,11 +39,11 @@ const SignUp = () => {
         // create user
         createUser(email, password)
           .then((result) => {
-            console.log(result.user)
+            toast.success("Registration Successfully")
             navigate('/login')
           })
           .catch((error) => {
-            console.log(error)
+            toast.error("Email is already exist")
           });
       };
     
