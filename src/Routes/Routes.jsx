@@ -9,6 +9,7 @@ import SignUp from "../Pages/SignUp/SignUp"
 import LogIn from "../Pages/LogIn/LogIn";
 import DetailsPage from "../Components/DetailsPage/DetailsPage";
 import ArtandCraftCategory from "../Pages/ArtandCraftCategory/ArtandCraftCategory";
+import PrivateRoutes from "./PrivateRoutes";
 
 
 
@@ -32,11 +33,11 @@ const router = createBrowserRouter([
         },
         {
             path: "/addartandcraft",
-            element: <AddartandCraft></AddartandCraft>
+            element: <PrivateRoutes><AddartandCraft></AddartandCraft></PrivateRoutes>
         },
         {
             path: "/myartandcraft",
-            element: <MyartandCraft></MyartandCraft>,
+            element: <PrivateRoutes><MyartandCraft></MyartandCraft>,</PrivateRoutes>
             
         },
         {
@@ -49,7 +50,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/details/:id",
-            element: <DetailsPage></DetailsPage>
+            element: <PrivateRoutes><DetailsPage></DetailsPage></PrivateRoutes>
         },
         {
             path: "/artandcraftCategory",
