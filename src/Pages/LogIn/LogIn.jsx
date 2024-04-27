@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 
 const LogIn = () => {
-    const {SignIn} = useAuth();
+    const {SignIn, googleSignin, githubsignIn} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
@@ -32,6 +32,24 @@ const LogIn = () => {
         })
     
       };
+
+    const handlegoogle = () => {
+      googleSignin()
+      .then(result => {
+        console.log(result.user)
+          navigate(location?.state ? location.state: '/')
+      })
+      .catch()
+    };
+
+    const handleGithub = () => {
+      githubsignIn()
+      .then(result => {
+        console.log(result.user)
+        navigate(location?.state ? location.state: '/')
+      })
+      .catch()
+    };
 
   return (
     <div>
@@ -95,14 +113,14 @@ const LogIn = () => {
           <p className="text-center mt-2 font-medium">Or Login with</p>
           <div className="flex justify-between">
             <button
-            //   onClick={handlegoogle}
+              onClick={handlegoogle}
               className="flex items-center gap-1 text-[#0077be] btn btn-sm rounded-none"
             >
               <FaGoogle />
               Google
             </button>
             <button
-            //   onClick={handleGithub}
+              onClick={handleGithub}
               className="flex items-center gap-1 text-[#0077be] btn btn-sm rounded-none"
             >
               <FaGithub />
