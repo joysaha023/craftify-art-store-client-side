@@ -8,6 +8,7 @@ import MyartandCraft from "../Pages/MyartandCraft/MyartandCraft";
 import SignUp from "../Pages/SignUp/SignUp"
 import LogIn from "../Pages/LogIn/LogIn";
 import DetailsPage from "../Components/DetailsPage/DetailsPage";
+import ArtandCraftCategory from "../Pages/ArtandCraftCategory/ArtandCraftCategory";
 
 
 
@@ -35,7 +36,8 @@ const router = createBrowserRouter([
         },
         {
             path: "/myartandcraft",
-            element: <MyartandCraft></MyartandCraft>
+            element: <MyartandCraft></MyartandCraft>,
+            
         },
         {
             path: "/signup",
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
         {
             path: "/details/:id",
             element: <DetailsPage></DetailsPage>
+        },
+        {
+            path: "/artandcraftCategory",
+            element: <ArtandCraftCategory></ArtandCraftCategory>,
         }
     ]
   },

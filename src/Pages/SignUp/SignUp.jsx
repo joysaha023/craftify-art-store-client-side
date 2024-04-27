@@ -17,7 +17,7 @@ const SignUp = () => {
 
     const onSubmit = (data) => {
         const { fullName, email, image, password } = data;
-        
+     
         setPasswordError("");
     
         if (password.length == "") {
