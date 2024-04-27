@@ -6,6 +6,7 @@ import ArtandCraftCategory from "../ArtandCraftCategory/ArtandCraftCategory";
 
 const Home = () => {
   const itemdata = useLoaderData();
+  
 
   return (
     <div>
