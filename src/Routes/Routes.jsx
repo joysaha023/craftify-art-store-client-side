@@ -10,6 +10,8 @@ import LogIn from "../Pages/LogIn/LogIn";
 import DetailsPage from "../Components/DetailsPage/DetailsPage";
 import ArtandCraftCategory from "../Pages/ArtandCraftCategory/ArtandCraftCategory";
 import PrivateRoutes from "./PrivateRoutes";
+import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
+import Profile from "../Pages/Profile/Profile";
 
 
 
@@ -55,6 +57,14 @@ const router = createBrowserRouter([
         {
             path: "/artandcraftCategory",
             element: <ArtandCraftCategory></ArtandCraftCategory>,
+        },
+        {
+            path: "/updateProfile",
+            element: <UpdateProfile></UpdateProfile>
+        },
+        {
+            path: "/profile",
+            element: <Profile></Profile>
         }
     ]
   },

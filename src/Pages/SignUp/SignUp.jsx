@@ -6,7 +6,7 @@ import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
 
 const SignUp = () => {
-    const {createUser} = useAuth();
+    const {createUser, updateUserProfile, logOut} = useAuth();
     const [showPassword, setShowPassword] = useState(false);
     const [passwordError, setPasswordError] = useState("");
     const navigate = useNavigate();
@@ -39,8 +39,12 @@ const SignUp = () => {
         // create user
         createUser(email, password)
           .then((result) => {
-            toast.success("Registration Successfully")
-            navigate('/login')
+            updateUserProfile(fullName, image)
+            .then(() => {
+              toast.success("Registration Successfully")
+              logOut();
+              navigate('/login')
+            })
           })
           .catch((error) => {
             toast.error("Email is already exist")
