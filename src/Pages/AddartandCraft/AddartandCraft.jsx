@@ -2,6 +2,8 @@ import React from "react";
 import useAuth from "../../Hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip'
 
 const AddartandCraft = () => {
   const { user } = useAuth();
@@ -205,8 +207,10 @@ const AddartandCraft = () => {
                 id="user_email"
                 defaultValue={user?.email}
                 name="user_email"
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="You can't edit this filed!"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                required
+                readOnly
               />
             </div>
             <div className="mb-6">
@@ -218,8 +222,10 @@ const AddartandCraft = () => {
                 id="user_name"
                 defaultValue={user?.displayName}
                 name="user_name"
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content="You can't edit this filed!"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                required
+                readOnly
               />
             </div>
             <div className="mb-4">
@@ -231,6 +237,7 @@ const AddartandCraft = () => {
               </button>
             </div>
           </form>
+          <Tooltip id="my-tooltip" />
         </div>
       </div>
     </div>

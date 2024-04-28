@@ -1,27 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
-import { Result } from "postcss";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
-  const [theme, setTheme] = useState('light');
-  
-  useEffect( () => {
-    localStorage.setItem('theme', theme)
-    const localTheme = localStorage.getItem('theme')
-    document.querySelector('html').setAttribute('data-theme', localTheme)
-  }, [theme])
+  const [theme, setTheme] = useState("light");
 
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+    const localTheme = localStorage.getItem("theme");
+    document.querySelector("html").setAttribute("data-theme", localTheme);
+  }, [theme]);
 
-
-  const handleToggle = e => {
-    if(e.target.checked) {
-      setTheme('dark')
+  const handleToggle = (e) => {
+    if (e.target.checked) {
+      setTheme("dark");
     } else {
-      setTheme('light')
+      setTheme("light");
     }
-  }
+  };
 
   const handleSignOut = () => {
     logOut()
@@ -124,7 +123,6 @@ const Navbar = () => {
               onChange={handleToggle}
               type="checkbox"
               className="theme-controller"
-              
             />
 
             {/* sun icon */}
@@ -151,6 +149,9 @@ const Navbar = () => {
                 tabIndex={0}
                 role="button"
                 className="btn btn-ghost btn-circle avatar"
+                data-tooltip-id="my-tooltip"
+                data-tooltip-content={user?.displayName}
+                data-tooltip-place="left"
               >
                 <div className="w-10 rounded-full">
                   <img
@@ -200,6 +201,7 @@ const Navbar = () => {
           )}
         </div>
       </div>
+      <Tooltip id="my-tooltip" />
     </div>
   );
 };
