@@ -1,8 +1,51 @@
-import React from "react";
-import { Link, useLoaderData } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { Link, json, useLoaderData } from "react-router-dom";
 
 const AllartandCraft = () => {
-  const allItems = useLoaderData();
+  const [isLoading, setIsLoading] = useState(true);
+  const [allItems, setallItems] = useState([]);
+  // const allItems = useLoaderData();
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Simulate API fetching delay
+        await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating 3 seconds delay
+
+        // Fetch data from API
+        const response = await fetch('http://localhost:5000/craftitems');
+        const fetchedData = await response.json();
+        
+        // Minimum loading time of 5 seconds
+        setTimeout(() => {
+          setallItems(fetchedData);
+          setIsLoading(false);
+        }, 2000); // 5 seconds in milliseconds - 3000 for API delay + 2000 minimum loading time
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  // useEffect(() => {
+  //   fetch('http://localhost:5000/craftitems')
+  //   .then((res) => res.json())
+  //   .then((data)=> {
+  //     setallItems(data)
+  //     setIsLoading(false)
+  //   })
+  // },[])
+
+  if (isLoading) {
+    return (
+      <div className="text-center mt-20">
+        <span className="loading  loading-spinner loading-lg"></span>
+      </div>
+    );
+}
 
   return (
     <div className="max-w-6xl mx-auto my-4">
