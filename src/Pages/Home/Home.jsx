@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div>
       <Slider></Slider>
-      <div className="max-w-6xl mx-auto mt-6">
+      <div className="max-w-6xl mx-auto mt-8 lg:mt-16">
         <div className="text-center space-y-4">
           <h2 className="text-xl md:text-3xl font-bold">
             Popular Art & Craft Items
@@ -36,9 +36,9 @@ const Home = () => {
         </div>
       </div>
       <ArtandCraftCategory></ArtandCraftCategory>
-      <div className="max-w-6xl mx-auto mt-6">
+      <div className="max-w-6xl mx-auto  mt-8 lg:mt-16">
         <div className="text-center space-y-4">
-          <h2 className="text-xl md:text-3xl font-bold">Our Gallery</h2>
+          <h2 className="text-xl md:text-3xl my-5 lg:my-10 font-bold">Our Gallery</h2>
         </div>
         <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {itemdata.slice(0, 6).map((item) => (

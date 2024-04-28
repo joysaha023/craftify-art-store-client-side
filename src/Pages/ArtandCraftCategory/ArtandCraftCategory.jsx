@@ -18,7 +18,7 @@ useEffect(() => {
 
 
   return (
-    <div className="max-w-6xl mx-auto">
+    <div className="max-w-6xl mx-auto mt-8 lg:mt-16">
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">
           Art & Craft Categories 
