@@ -17,7 +17,7 @@ const DetailsPage = () => {
 
 
     return (
-        <div>
+        <div className='max-w-6xl mx-auto '>
             <h2>{Items.item_name}</h2>
             <img className='p-10' src={Items.image} alt="" />
         </div>

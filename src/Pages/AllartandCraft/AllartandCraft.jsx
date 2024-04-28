@@ -41,14 +41,14 @@ const AllartandCraft = () => {
 
   if (isLoading) {
     return (
-      <div className="text-center mt-20">
+      <div className="text-center my-20">
         <span className="loading  loading-spinner loading-lg"></span>
       </div>
     );
 }
 
   return (
-    <div className="max-w-6xl mx-auto my-4">
+    <div className="max-w-6xl h-screen mx-auto my-4">
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">All Art & Crafts</h2>
       </div>
