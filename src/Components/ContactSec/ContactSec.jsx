@@ -1,4 +1,6 @@
 import React from "react";
+import Lottie from "lottie-react";
+import Contact from "./Contact.json"
 
 const ContactSec = () => {
   return (
@@ -8,10 +10,10 @@ const ContactSec = () => {
       </div>
       <div>
         <div>
-
+            <Lottie animationData={Contact} />
         </div>
         <div>
-            
+
         </div>
       </div>
     </div>
