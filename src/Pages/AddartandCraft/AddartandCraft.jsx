@@ -50,7 +50,6 @@ const {user} = useAuth();
       </div>
       <div>
         <div className=" mx-auto bg-gray-200 rounded-md shadow-md my-5 p-6">
-          
           <form onSubmit={handleSubmit}>
             <div className="mb-4">
               <label className="block text-sm font-medium text-gray-700">
@@ -209,7 +208,7 @@ const {user} = useAuth();
                 type="submit"
                 className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
               >
-                Add
+                Add Items
               </button>
             </div>
           </form>
