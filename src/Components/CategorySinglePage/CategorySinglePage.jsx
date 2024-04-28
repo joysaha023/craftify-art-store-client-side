@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { FaStar } from "react-icons/fa";
 import { Link, useParams } from "react-router-dom";
 
@@ -17,6 +18,9 @@ const CategorySinglePage = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+       <Helmet>
+        <title>CraftiFY - Art & Craft Category</title>
+      </Helmet>
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">
           Art & Craft Single Category

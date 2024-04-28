@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import 'react-tooltip/dist/react-tooltip.css';
 import { Tooltip } from 'react-tooltip'
+import { Helmet } from "react-helmet-async";
 
 const AddartandCraft = () => {
   const { user } = useAuth();
@@ -59,6 +60,9 @@ const AddartandCraft = () => {
 
   return (
     <div className="max-w-6xl mx-auto px-2">
+       <Helmet>
+        <title>CraftiFY - Add Art & Craft </title>
+      </Helmet>
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">
           Add Your Art & Craft Item

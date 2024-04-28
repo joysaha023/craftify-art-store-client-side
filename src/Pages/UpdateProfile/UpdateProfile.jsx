@@ -26,7 +26,7 @@ const UpdateProfile = () => {
   return (
     <div className="max-w-6xl mx-auto">
       <Helmet>
-        <title>CraftiFY - Login</title>
+        <title>CraftiFY - Update Profile</title>
       </Helmet>
       <div className="">
         <div className="flex flex-col items-center ">

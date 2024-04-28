@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Link } from "react-router-dom";
 
 const CategoryData = ({ data }) => {
@@ -6,6 +7,7 @@ const CategoryData = ({ data }) => {
 
   return (
     <div>
+      
       <div className="card h-full w-full bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="img" />

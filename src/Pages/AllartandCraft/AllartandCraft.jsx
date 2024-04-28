@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, json, useLoaderData } from "react-router-dom";
 
 const AllartandCraft = () => {
@@ -49,6 +50,9 @@ const AllartandCraft = () => {
 
   return (
     <div className="max-w-6xl h-screen mx-auto mt-4">
+       <Helmet>
+        <title>CraftiFY - All Art & Craft</title>
+      </Helmet>
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">All Art & Crafts</h2>
       </div>
