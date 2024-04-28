@@ -35,7 +35,7 @@ const Navbar = () => {
           to={"/"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -47,7 +47,7 @@ const Navbar = () => {
           to={"/allartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -59,7 +59,7 @@ const Navbar = () => {
           to={"/addartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
               : "font-medium"
           }
         >
@@ -71,7 +71,7 @@ const Navbar = () => {
           to={"/myartandcraft"}
           className={({ isActive }) =>
             isActive
-              ? "bg-white hover:bg-white text-[#5F9EA0] border-0 font-semibold underline"
+              ? "bg-white hover:bg-white text-[#38B2AC] border-0 font-semibold underline"
               : "font-medium"
           }
         >

@@ -30,7 +30,7 @@ const Home = () => {
           ))}
         </div>
         <div className="text-center my-6">
-          <Link to={"/allartandcraft"} className="btn btn-accent">
+          <Link to={"/allartandcraft"} className="btn text-white btn-accent">
             View More
           </Link>
         </div>

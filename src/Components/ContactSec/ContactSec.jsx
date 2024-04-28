@@ -65,7 +65,7 @@ const ContactSec = () => {
               <div className="text-right">
                 <button
                   type="submit"
-                  className="btn bg-[#0077be] rounded-md text-white hover:text-black"
+                  className="btn btn-accent rounded-md text-white "
                 >
                   Submit
                 </button>

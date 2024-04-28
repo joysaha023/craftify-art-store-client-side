@@ -14,7 +14,7 @@ const CategoryData = ({ data }) => {
           <h2 className="card-title">{category}</h2>
           <p>{desc}</p>
           <div className="card-actions justify-end">
-            <Link to={`/categorysinglepage/${category}`} className="btn btn-md btn-accent">See All</Link>
+            <Link to={`/categorysinglepage/${category}`} className="btn text-white btn-md btn-accent">See All</Link>
           </div>
         </div>
       </div>

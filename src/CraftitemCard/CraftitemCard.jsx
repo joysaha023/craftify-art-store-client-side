@@ -19,7 +19,7 @@ const CraftitemCard = ({ item }) => {
           <p>Price: ${price}</p>
           <p>Rating: {rating}</p>
           <div className="card-actions justify-end">
-            <Link to={`/details/${_id}`} className="btn btn-primary">View Details</Link>
+            <Link to={`/details/${_id}`} className="btn btn-accent text-white">View Details</Link>
           </div>
         </div>
       </div>
