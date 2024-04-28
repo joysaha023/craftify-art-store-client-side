@@ -56,7 +56,7 @@ const MyartandCraft = () => {
       </div>
       <div className="text-center my-6">
         <div className="dropdown btn-accent ">
-          <div tabIndex={0} role="button" className="btn m-1">
+          <div tabIndex={0} role="button" className="btn text-white m-1">
             Customization <IoIosArrowDown />
           </div>
           <ul
@@ -101,10 +101,10 @@ const MyartandCraft = () => {
               <p className="flex">Customization: {data.customization}</p>
               <p className="flex">Stock Status: {data.stock_status}</p>
               <div className="card-actions justify-between">
-                <Link to={`/updateitem/${data._id}`} className="btn  btn-accent">Update</Link>
+                <Link to={`/updateitem/${data._id}`} className="btn text-white btn-accent">Update</Link>
                 <button
                   onClick={() => handleDelete(data._id)}
-                  className="btn btn-error"
+                  className="btn text-white btn-error"
                 >
                   Delete
                 </button>

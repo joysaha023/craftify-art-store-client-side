@@ -58,6 +58,7 @@ const UpdateProfile = () => {
                 placeholder="Photo URL"
                 className="input input-bordered rounded-none"
                 {...register("image")}
+                required
               />
             </div>
             <div className="form-control mt-6">

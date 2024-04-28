@@ -101,13 +101,13 @@ const LogIn = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#0077be] text-white hover:text-black rounded-none ">
+            <button className="btn bg-[#38B2AC] hover:text-black text-white rounded-none ">
               Login
             </button>
           </div>
           <h2 className="text-center mt-2 font-medium">
             Not a Member Yet?{" "}
-            <Link to={"/signup"} className="text-[#0077be] underline">
+            <Link to={"/signup"} className="text-[#38B2AC] underline">
               Sign Up
             </Link>
           </h2>
@@ -115,14 +115,14 @@ const LogIn = () => {
           <div className="flex justify-between">
             <button
               onClick={handlegoogle}
-              className="flex items-center gap-1 text-[#0077be] btn btn-sm rounded-none"
+              className="flex items-center gap-1 text-[#38B2AC] btn btn-sm rounded-none"
             >
               <FaGoogle />
               Google
             </button>
             <button
               onClick={handleGithub}
-              className="flex items-center gap-1 text-[#0077be] btn btn-sm rounded-none"
+              className="flex items-center gap-1 text-[#38B2AC] btn btn-sm rounded-none"
             >
               <FaGithub />
               Github

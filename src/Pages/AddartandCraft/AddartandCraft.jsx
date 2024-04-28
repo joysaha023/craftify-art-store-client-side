@@ -231,7 +231,7 @@ const AddartandCraft = () => {
             <div className="mb-4">
               <button
                 type="submit"
-                className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
+                className="w-full btn hover:text-black bg-[#38B2AC] hover:bg-[#7fdcd7] text-white py-2 px-4 rounded-md  transition duration-200"
               >
                 Add Items
               </button>

@@ -130,13 +130,13 @@ const SignUp = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#0077be] text-white hover:text-black rounded-none ">
+            <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-none ">
               Register
             </button>
           </div>
           <h2 className="text-center mt-2 font-medium">
             Already have an account?{" "}
-            <Link to={"/login"} className="text-[#0077be] underline">
+            <Link to={"/login"} className="text-[#38B2AC] underline">
               Login
             </Link>
           </h2>

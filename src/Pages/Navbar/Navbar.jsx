@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const { user, logOut } = useAuth();
@@ -24,7 +25,9 @@ const Navbar = () => {
 
   const handleSignOut = () => {
     logOut()
-      .then((result) => {})
+      .then((result) => {
+        toast.warning("LogOut")
+      })
       .catch();
   };
 
@@ -187,13 +190,13 @@ const Navbar = () => {
             <div className="flex items-center gap-4">
               <Link
                 to={"/login"}
-                className="btn btn-sm md:btn-md rounded-full bg-[#5F9EA0]"
+                className="btn btn-sm md:btn-md rounded-full btn-primary text-white"
               >
                 Log In
               </Link>
               <Link
                 to={"/signup"}
-                className="btn hidden btn-sm md:flex md:btn-md rounded-full btn-accent"
+                className="btn hidden btn-sm md:flex md:btn-md rounded-full text-white btn-accent"
               >
                 Sign Up
               </Link>
