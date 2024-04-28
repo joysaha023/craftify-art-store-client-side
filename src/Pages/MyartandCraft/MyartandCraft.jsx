@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import useAuth from "../../Hooks/useAuth";
 import { IoIosArrowDown } from "react-icons/io";
 import MyartandcraftSingle from "../../Components/MyartandcraftSingle/MyartandcraftSingle";
+import { FaStar } from "react-icons/fa";
 
 const MyartandCraft = () => {
   const { user } = useAuth();
   const [items, setItems] = useState([]);
+  const [control, setControl] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:5000/mylistitems/${user?.email}`)
@@ -13,7 +15,21 @@ const MyartandCraft = () => {
       .then((data) => {
         setItems(data);
       });
-  }, [user]);
+  }, [user, control]);
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:5000/delete/${id}`, {
+      method: "DELETE",
+    })
+    .then((res) => res.json())
+    .then((data) => {
+      if(data.deletedCount > 0){
+        setControl(!control)
+      }
+    })
+  }
+
+
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -40,7 +56,31 @@ const MyartandCraft = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {items.map((data) => (
-          <MyartandcraftSingle key={data._id} data={data}></MyartandcraftSingle>
+           <div key={data._id} className="card h-full w-full bg-base-100 shadow-xl">
+           <figure className="px-10 pt-10">
+             <img src={data.image} alt={data.item_name} className="rounded-xl" />
+           </figure>
+           <div className="card-body  text-center">
+             <div className="flex gap-4 justify-between">
+               <div>
+                 <p>${data.price}</p>
+               </div>
+               <div>
+                 <p className="flex items-center gap-1">
+                   <FaStar />
+                   {data.rating}
+                 </p>
+               </div>
+             </div>
+             <h2 className="card-title">{data.item_name}</h2>
+             <p className="flex">Customization: {data.customization}</p>
+             <p className="flex">Stock Status: {data.stock_status}</p>
+             <div className="card-actions justify-between">
+               <button className="btn  btn-accent">Update</button>
+               <button onClick={() => handleDelete(data._id)} className="btn btn-error">Delete</button>
+             </div>
+           </div>
+         </div>
         ))}
       </div>
     </div>
