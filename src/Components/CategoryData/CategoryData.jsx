@@ -1,10 +1,23 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const CategoryData = ({data}) => {
-   
+const CategoryData = ({ data }) => {
+  const { image, category, desc } = data;
+
   return (
     <div>
-      <h2>hello</h2>
+      <div className="card w-full bg-base-100 shadow-xl">
+        <figure>
+          <img src={image} alt="img" />
+        </figure>
+        <div className="card-body">
+          <h2 className="card-title">{category}</h2>
+          <p>{desc}</p>
+          <div className="card-actions justify-end">
+            <Link className="btn btn-md btn-accent">See All</Link>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

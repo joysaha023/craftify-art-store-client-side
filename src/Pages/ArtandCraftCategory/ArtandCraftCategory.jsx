@@ -27,7 +27,7 @@ useEffect(() => {
           This section all card is art and craft category where you can select and chose your category wise items. this section help to a find this art craft items is shortly.
         </p>
       </div>
-      <div>
+      <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
         {
             allData.map(data => <CategoryData key={data._id} data={data}></CategoryData>)
         }
