@@ -4,6 +4,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import CraftitemCard from "../../CraftitemCard/CraftitemCard";
 import ArtandCraftCategory from "../ArtandCraftCategory/ArtandCraftCategory";
 import GalleryCard from "../../Components/GalletyCard/GalleryCard";
+import ContactSec from "../../Components/ContactSec/ContactSec";
 
 const Home = () => {
   const itemdata = useLoaderData();
@@ -44,6 +45,7 @@ const Home = () => {
           ))}
         </div>
       </div>
+      <ContactSec></ContactSec>
     </div>
   );
 };
