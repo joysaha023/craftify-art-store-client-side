@@ -112,8 +112,8 @@ const Navbar = () => {
               {linkNav}
             </ul>
           </div>
-          <Link to={"/"} className="btn btn-ghost  text-xl">
-            CraftiFY
+          <Link to={"/"} className="btn btn-ghost gap-0 font-bold text-xl">
+            Crafti <span className="text-[#38B2AC]">FY</span>
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">

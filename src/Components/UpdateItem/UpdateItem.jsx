@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
@@ -55,6 +56,9 @@ const UpdateItem = () => {
       <h2>Update item on </h2>
 
       <div>
+      <Helmet>
+        <title>CraftiFY - Update Art & Craft</title>
+      </Helmet>
         <div className=" mx-auto bg-gray-200 rounded-md shadow-md my-5 p-6">
           <form onSubmit={handleSubmit}>
             <div className="mb-4">

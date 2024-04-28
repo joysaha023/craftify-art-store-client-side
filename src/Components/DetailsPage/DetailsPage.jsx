@@ -20,7 +20,7 @@ const DetailsPage = () => {
     return (
         <div className='max-w-6xl mx-auto '>
            <Helmet>
-        <title>CraftiFY - Art & Craft Details</title>
+        <title>CraftiFY - Details Art & Craft </title>
       </Helmet>
             <h2 className='text-center text-3xl font-bold'>Art and Craft Details</h2>
             <div className="card my-5 w-full rounded-md bg-base-100 shadow-none border ">

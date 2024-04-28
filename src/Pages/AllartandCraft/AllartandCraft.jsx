@@ -49,7 +49,7 @@ const AllartandCraft = () => {
 }
 
   return (
-    <div className="max-w-6xl h-screen mx-auto mt-4">
+    <div className="max-w-6xl  mx-auto mt-4">
        <Helmet>
         <title>CraftiFY - All Art & Craft</title>
       </Helmet>
