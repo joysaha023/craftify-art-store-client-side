@@ -6,7 +6,7 @@ const CategoryData = ({ data }) => {
 
   return (
     <div>
-      <div className="card w-full bg-base-100 shadow-xl">
+      <div className="card h-full w-full bg-base-100 shadow-xl">
         <figure>
           <img src={image} alt="img" />
         </figure>
@@ -14,7 +14,7 @@ const CategoryData = ({ data }) => {
           <h2 className="card-title">{category}</h2>
           <p>{desc}</p>
           <div className="card-actions justify-end">
-            <Link className="btn btn-md btn-accent">See All</Link>
+            <Link to={`/categorysinglepage/${category}`} className="btn btn-md btn-accent">See All</Link>
           </div>
         </div>
       </div>

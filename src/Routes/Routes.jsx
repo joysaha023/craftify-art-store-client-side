@@ -13,6 +13,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import UpdateProfile from "../Pages/UpdateProfile/UpdateProfile";
 import Profile from "../Pages/Profile/Profile";
 import UpdateItem from "../Components/UpdateItem/UpdateItem";
+import CategorySinglePage from "../Components/CategorySinglePage/CategorySinglePage";
 
 
 
@@ -61,6 +62,10 @@ const router = createBrowserRouter([
         {
             path: "/artandcraftCategory",
             element: <ArtandCraftCategory></ArtandCraftCategory>,
+        },
+        {
+            path: "/categorysinglepage/:id",
+            element: <CategorySinglePage></CategorySinglePage>
         },
         {
             path: "/updateProfile",
