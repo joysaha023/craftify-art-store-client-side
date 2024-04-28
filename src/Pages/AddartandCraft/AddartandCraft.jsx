@@ -1,9 +1,11 @@
 import React from "react";
 import useAuth from "../../Hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const AddartandCraft = () => {
-const {user} = useAuth();
-
+  const { user } = useAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,22 +21,39 @@ const {user} = useAuth();
     const stock_status = form.stock_status.value;
     const user_email = form.user_email.value;
     const user_name = form.user_name.value;
-    const itemData = {image, item_name, subcategory_Name, description, price, rating, customization, processing_time, stock_status, user_email, user_name}
-    console.log(itemData)
+    const itemData = {
+      image,
+      item_name,
+      subcategory_Name,
+      description,
+      price,
+      rating,
+      customization,
+      processing_time,
+      stock_status,
+      user_email,
+      user_name,
+    };
+    console.log(itemData);
 
-    fetch('http://localhost:5000/craftitems', {
-        method: 'POST',
-        headers: {
-            'content-type' : 'application/json'
-        },
-        body: JSON.stringify(itemData)
+    fetch("http://localhost:5000/craftitems", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(itemData),
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-    })
-  }
-
+      .then((res) => res.json())
+      .then((data) => {
+        Swal.fire({
+          title: "Update Changes",
+          text: "Your item has been updated.",
+          icon: "success",
+      });
+      navigate('/myartandcraft')
+        console.log(data);
+      });
+  };
 
   return (
     <div className="max-w-6xl mx-auto px-2">
@@ -184,7 +203,7 @@ const {user} = useAuth();
               <input
                 type="email"
                 id="user_email"
-                defaultValue={user?.email }
+                defaultValue={user?.email}
                 name="user_email"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
@@ -197,7 +216,7 @@ const {user} = useAuth();
               <input
                 type="text"
                 id="user_name"
-                defaultValue={user?.displayName }
+                defaultValue={user?.displayName}
                 name="user_name"
                 className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required

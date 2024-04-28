@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const UpdateItem = () => {
   const { id } = useParams();
   const [product, setProduct] = useState({});
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch(`http://localhost:5000/updateItem/${id}`)
@@ -34,7 +36,15 @@ const UpdateItem = () => {
     })
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        if(data.modifiedCount > 0){
+            Swal.fire({
+                title: "Update Changes",
+                text: "Your item has been updated.",
+                icon: "success",
+            });
+            navigate('/myartandcraft')
+            console.log(data);
+        }
     })
   }
 
