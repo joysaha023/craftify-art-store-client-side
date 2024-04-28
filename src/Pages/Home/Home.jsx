@@ -3,10 +3,10 @@ import Slider from "../../Components/Slider/Slider";
 import { Link, useLoaderData } from "react-router-dom";
 import CraftitemCard from "../../CraftitemCard/CraftitemCard";
 import ArtandCraftCategory from "../ArtandCraftCategory/ArtandCraftCategory";
+import GalleryCard from "../../Components/GalletyCard/GalleryCard";
 
 const Home = () => {
   const itemdata = useLoaderData();
-  
 
   return (
     <div>
@@ -34,6 +34,16 @@ const Home = () => {
         </div>
       </div>
       <ArtandCraftCategory></ArtandCraftCategory>
+      <div className="max-w-6xl mx-auto mt-6">
+        <div className="text-center space-y-4">
+          <h2 className="text-xl md:text-3xl font-bold">Our Gallery</h2>
+        </div>
+        <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
+          {itemdata.slice(0, 6).map((item) => (
+            <GalleryCard key={item._id} item={item}></GalleryCard>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

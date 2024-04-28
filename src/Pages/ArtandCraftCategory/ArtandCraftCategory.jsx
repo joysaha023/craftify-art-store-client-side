@@ -3,7 +3,7 @@ import CategoryData from "../../Components/CategoryData/CategoryData";
 
 
 const ArtandCraftCategory = () => {
-const [allData, setAllData] = useState({});
+const [allData, setAllData] = useState([]);
 
 // console.log(allData)
 
@@ -28,9 +28,9 @@ useEffect(() => {
         </p>
       </div>
       <div>
-        {/* {
+        {
             allData.map(data => <CategoryData key={data._id} data={data}></CategoryData>)
-        } */}
+        }
       </div>
     </div>
   );
