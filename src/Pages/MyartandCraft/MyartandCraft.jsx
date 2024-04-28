@@ -4,6 +4,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import MyartandcraftSingle from "../../Components/MyartandcraftSingle/MyartandcraftSingle";
 import { FaStar } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const MyartandCraft = () => {
   const { user } = useAuth();
@@ -99,7 +100,7 @@ const MyartandCraft = () => {
               <p className="flex">Customization: {data.customization}</p>
               <p className="flex">Stock Status: {data.stock_status}</p>
               <div className="card-actions justify-between">
-                <button className="btn  btn-accent">Update</button>
+                <Link to={`/updateitem/${data._id}`} className="btn  btn-accent">Update</Link>
                 <button
                   onClick={() => handleDelete(data._id)}
                   className="btn btn-error"
