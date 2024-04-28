@@ -5,13 +5,16 @@ import CraftitemCard from "../../CraftitemCard/CraftitemCard";
 import ArtandCraftCategory from "../ArtandCraftCategory/ArtandCraftCategory";
 import GalleryCard from "../../Components/GalletyCard/GalleryCard";
 import ContactSec from "../../Components/ContactSec/ContactSec";
-
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const itemdata = useLoaderData();
 
   return (
     <div>
+      <Helmet>
+        <title>CraftiFY - Home</title>
+      </Helmet>
       <Slider></Slider>
       <div className="max-w-6xl mx-auto mt-8 lg:mt-16">
         <div className="text-center space-y-4">
@@ -38,7 +41,9 @@ const Home = () => {
       <ArtandCraftCategory></ArtandCraftCategory>
       <div className="max-w-6xl mx-auto  mt-8 lg:mt-16">
         <div className="text-center space-y-4">
-          <h2 className="text-xl md:text-3xl my-5 lg:my-10 font-bold">Our Gallery</h2>
+          <h2 className="text-xl md:text-3xl my-5 lg:my-10 font-bold">
+            Our Gallery
+          </h2>
         </div>
         <div className="grid grid-cols-1 px-3 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
           {itemdata.slice(0, 6).map((item) => (

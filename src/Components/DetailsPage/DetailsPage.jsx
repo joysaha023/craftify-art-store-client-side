@@ -37,7 +37,7 @@ const DetailsPage = () => {
           <p><span className="font-semibold text-lg">Processing Time:</span> {Items.processing_time}</p>
           <p><span className="font-semibold text-lg">Stock Status:</span> {Items.stock_status}</p>
           <div className="card-actions justify-end">
-            <button className="btn bg-[#0077be] text-white hover:text-black rounded-md">Buy Now</button>
+            <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-md">Buy Now</button>
           </div>
         </div>
       </div>

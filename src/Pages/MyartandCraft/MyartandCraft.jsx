@@ -5,6 +5,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { FaStar } from "react-icons/fa";
 import Swal from "sweetalert2";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const MyartandCraft = () => {
   const { user } = useAuth();
@@ -51,6 +52,9 @@ const MyartandCraft = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
+      <Helmet>
+        <title>CraftiFY - My Art & Craft</title>
+      </Helmet>
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">My Art & Craft List</h2>
       </div>

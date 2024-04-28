@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import useAuth from "../../Hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 const UpdateProfile = () => {
   const { user, updateUserProfile } = useAuth();
@@ -24,7 +25,9 @@ const UpdateProfile = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      
+      <Helmet>
+        <title>CraftiFY - Login</title>
+      </Helmet>
       <div className="">
         <div className="flex flex-col items-center ">
           <img

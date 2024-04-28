@@ -4,6 +4,7 @@ import { FaGithub, FaGoogle, FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const LogIn = () => {
     const {SignIn, googleSignin, githubsignIn} = useAuth();
@@ -54,6 +55,9 @@ const LogIn = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CraftiFY - Login</title>
+      </Helmet>
       <div className="flex flex-col items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}

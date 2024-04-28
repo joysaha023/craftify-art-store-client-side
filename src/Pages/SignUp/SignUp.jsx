@@ -4,6 +4,7 @@ import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../Hooks/useAuth";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const SignUp = () => {
     const {createUser, updateUserProfile, logOut} = useAuth();
@@ -56,6 +57,9 @@ const SignUp = () => {
 
   return (
     <div>
+      <Helmet>
+        <title>CraftiFY - Sign Up</title>
+      </Helmet>
       <div className="flex flex-col items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}

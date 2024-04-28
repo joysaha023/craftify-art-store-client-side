@@ -48,7 +48,7 @@ const AllartandCraft = () => {
 }
 
   return (
-    <div className="max-w-6xl h-screen mx-auto my-4">
+    <div className="max-w-6xl h-screen mx-auto mt-4">
       <div className="text-center space-y-4">
         <h2 className="text-xl md:text-3xl font-bold">All Art & Crafts</h2>
       </div>
