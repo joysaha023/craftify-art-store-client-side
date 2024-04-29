@@ -2,8 +2,8 @@ import React from "react";
 import useAuth from "../../Hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
-import 'react-tooltip/dist/react-tooltip.css';
-import { Tooltip } from 'react-tooltip'
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 import { Helmet } from "react-helmet-async";
 
 const AddartandCraft = () => {
@@ -52,15 +52,15 @@ const AddartandCraft = () => {
           title: "Successfully Added",
           text: "Your item has been added.",
           icon: "success",
-      });
-      navigate('/myartandcraft')
+        });
+        navigate("/myartandcraft");
         console.log(data);
       });
   };
 
   return (
     <div className="max-w-6xl mx-auto px-2">
-       <Helmet>
+      <Helmet>
         <title>CraftiFY - Add Art & Craft </title>
       </Helmet>
       <div className="text-center space-y-4">
@@ -206,16 +206,26 @@ const AddartandCraft = () => {
               <label className="block text-sm font-medium text-gray-700">
                 User Email:
               </label>
-              <input
-                type="email"
-                id="user_email"
-                defaultValue={user?.email}
-                name="user_email"
-                data-tooltip-id="my-tooltip"
-                data-tooltip-content="You can't edit this filed!"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                readOnly
-              />
+              {user.email ? (
+                <input
+                  type="email"
+                  id="user_email"
+                  defaultValue={user?.email}
+                  name="user_email"
+                  data-tooltip-id="my-tooltip"
+                  data-tooltip-content="You can't edit this filed!"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  readOnly
+                />
+              ) : (
+                <input
+                  type="email"
+                  id="user_email"
+                  name="user_email"
+                  className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  required
+                />
+              )}
             </div>
             <div className="mb-6">
               <label className="block text-sm font-medium text-gray-700">
