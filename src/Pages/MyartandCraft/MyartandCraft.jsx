@@ -10,14 +10,29 @@ import { Helmet } from "react-helmet-async";
 const MyartandCraft = () => {
   const { user } = useAuth();
   const [items, setItems] = useState([]);
+  const [customize, setCustomize] = useState([]);
   const [control, setControl] = useState(false);
 
+  const handleCustomization = filter => {
+    if(filter === 'all'){
+      setCustomize(items);
+    }
+    else if (filter === 'yes'){
+      const customizable = items.filter(data => data.customization === 'yes');
+      setCustomize(customizable);
+    }
+    else if(filter === 'no'){
+      const nocustomizable = items.filter(data => data.customization === 'no');
+      setCustomize(nocustomizable);
+    }
+  }
 
   useEffect(() => {
     fetch(`http://localhost:5000/mylistitems/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
+        setCustomize(data);
       });
   }, [user, control]);
 
@@ -67,17 +82,20 @@ const MyartandCraft = () => {
             tabIndex={0}
             className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
           >
-            <li>
+            <li onClick={() => handleCustomization('all')}>
+              <a>All</a>
+            </li>
+            <li onClick={() => handleCustomization('yes')}>
               <a>Customizable</a>
             </li>
-            <li>
+            <li onClick={()=> handleCustomization('no')}>
               <a>Not Customizable</a>
             </li>
           </ul>
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {items.map((data) => (
+        {customize.map((data) => (
           <div
             key={data._id}
             className="card h-full w-full bg-base-100 shadow-xl"
