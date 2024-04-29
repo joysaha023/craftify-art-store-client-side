@@ -1,4 +1,4 @@
-# Art-&-Craft-Store-Project
+# Painting-and-Drawing-Project
 
 This website where you can find art, paint and you also add your art and craft items and show the world your talent.
 
