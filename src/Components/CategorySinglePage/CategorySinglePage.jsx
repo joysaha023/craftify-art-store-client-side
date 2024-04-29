@@ -9,7 +9,7 @@ const CategorySinglePage = () => {
   console.log(category);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/categoryItems/${id}`)
+    fetch(`https://art-craft-server-side-three.vercel.app/categoryItems/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setCategory(data);

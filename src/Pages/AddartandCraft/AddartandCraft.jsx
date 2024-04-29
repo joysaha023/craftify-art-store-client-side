@@ -39,7 +39,7 @@ const AddartandCraft = () => {
     };
     console.log(itemData);
 
-    fetch("http://localhost:5000/craftitems", {
+    fetch("https://art-craft-server-side-three.vercel.app/craftitems", {
       method: "POST",
       headers: {
         "content-type": "application/json",

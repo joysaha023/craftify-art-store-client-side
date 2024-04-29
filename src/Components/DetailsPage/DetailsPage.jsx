@@ -8,7 +8,7 @@ const DetailsPage = () => {
   
 
     useEffect(() => {
-        fetch(`http://localhost:5000/singleItems/${id}`)
+        fetch(`https://art-craft-server-side-three.vercel.app/singleItems/${id}`)
         .then(res => res.json())
         .then(data => {
             setItems(data)

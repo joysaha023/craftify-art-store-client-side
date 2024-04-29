@@ -28,7 +28,7 @@ const MyartandCraft = () => {
   }
 
   useEffect(() => {
-    fetch(`http://localhost:5000/mylistitems/${user?.email}`)
+    fetch(`https://art-craft-server-side-three.vercel.app/mylistitems/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setItems(data);
@@ -47,7 +47,7 @@ const MyartandCraft = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://art-craft-server-side-three.vercel.app/delete/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

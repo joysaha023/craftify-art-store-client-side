@@ -8,7 +8,7 @@ const [allData, setAllData] = useState([]);
 // console.log(allData)
 
 useEffect(() => {
-    fetch('http://localhost:5000/craftcategory')
+    fetch('https://art-craft-server-side-three.vercel.app/craftcategory')
     .then(res => res.json())
     .then(data => {
         setAllData(data);

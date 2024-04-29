@@ -15,7 +15,7 @@ const AllartandCraft = () => {
         await new Promise(resolve => setTimeout(resolve, 1000)); // Simulating 3 seconds delay
 
         // Fetch data from API
-        const response = await fetch('http://localhost:5000/craftitems');
+        const response = await fetch('https://art-craft-server-side-three.vercel.app/craftitems');
         const fetchedData = await response.json();
         
         // Minimum loading time of 5 seconds
