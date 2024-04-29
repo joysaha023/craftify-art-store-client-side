@@ -11,3 +11,14 @@ Live Site URL: [CraftiFY](https://craftify-art-store.web.app/)
 <a href="https://craftify-art-store.web.app">
   <img src="https://github.com/programming-hero-web-course-4/B9A10-client-side-joysaha023/blob/main/demo-2.png" />
 </a>
+
+
+## Technology Used
+
+ - React, MongoDB, ExpressJs, Node JS,
+ - Deisy Ui, Firebase, 
+ - HTML, CSS, Tailwind CSS, JavaScript
+
+
+## Key Features:
+### Introduction
