@@ -49,8 +49,8 @@ const AddartandCraft = () => {
       .then((res) => res.json())
       .then((data) => {
         Swal.fire({
-          title: "Update Changes",
-          text: "Your item has been updated.",
+          title: "Successfully Added",
+          text: "Your item has been added.",
           icon: "success",
       });
       navigate('/myartandcraft')

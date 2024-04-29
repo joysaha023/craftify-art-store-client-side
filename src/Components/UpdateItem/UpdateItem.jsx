@@ -32,7 +32,7 @@ const UpdateItem = () => {
     
     fetch(`https://art-craft-server-side-three.vercel.app/updateInfoo/${id}`, {
         method: "PUT",
-        headers: { "Content-type": "application/json"},
+        headers: { "content-type": "application/json"},
         body:JSON.stringify(updateInfo)
     })
     .then(res => res.json())
@@ -53,7 +53,9 @@ const UpdateItem = () => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <h2>Update item on </h2>
+      <div className="text-center space-y-4">
+        <h2 className="text-xl md:text-3xl font-bold">Update Art & Craft</h2>
+      </div>
 
       <div>
       <Helmet>
@@ -194,7 +196,7 @@ const UpdateItem = () => {
             <div className="mb-4">
               <button
                 type="submit"
-                className="w-full bg-indigo-500 text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
+                className="w-full bg-[#38B2AC] text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
               >
                 Update Items
               </button>
