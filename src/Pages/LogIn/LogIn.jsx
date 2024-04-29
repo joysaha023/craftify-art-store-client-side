@@ -61,7 +61,7 @@ const LogIn = () => {
       <div className="flex flex-col items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="card-body lg:w-[30%] border"
+          className="card-body rounded-md lg:w-[30%] border"
         >
           <h2 className="text-center text-2xl md:text-3xl font-bold">Login</h2>
           <div className="form-control">
@@ -71,7 +71,7 @@ const LogIn = () => {
             <input
               type="email"
               placeholder="email"
-              className="input input-bordered rounded-none"
+              className="input input-bordered rounded-md"
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -82,7 +82,7 @@ const LogIn = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <label className="input input-bordered rounded-none flex items-center gap-2">
+            <label className="input input-bordered rounded-md flex items-center gap-2">
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
@@ -105,7 +105,7 @@ const LogIn = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#38B2AC] hover:text-black text-white rounded-none ">
+            <button className="btn bg-[#38B2AC] hover:text-black text-white rounded-md ">
               Login
             </button>
           </div>

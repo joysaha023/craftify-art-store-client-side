@@ -39,7 +39,7 @@ const UpdateProfile = () => {
           <p className="text-lg mb-2">{user?.email}</p>
         </div>
         <div className="flex flex-col items-center">
-          <form onSubmit={handleSubmit(onSubmit)} className="card-body lg:w-[30%] border">
+          <form onSubmit={handleSubmit(onSubmit)} className="card-body rounded-md lg:w-[30%] border">
             <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
@@ -48,7 +48,7 @@ const UpdateProfile = () => {
                 type="text"
                 placeholder="name"
                 defaultValue={user?.displayName}
-                className="input input-bordered rounded-none"
+                className="input input-bordered rounded-md"
                 {...register("name", { required: true })}
               />
             </div>
@@ -59,13 +59,13 @@ const UpdateProfile = () => {
               <input
                 type="text"
                 placeholder="Photo URL"
-                className="input input-bordered rounded-none"
+                className="input input-bordered rounded-md"
                 {...register("image")}
                 required
               />
             </div>
             <div className="form-control mt-6">
-              <button className="btn bg-[#0077be] text-white hover:text-black rounded-none ">
+              <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-none ">
                 Save Changes
               </button>
             </div>

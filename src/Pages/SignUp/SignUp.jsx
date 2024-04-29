@@ -63,7 +63,7 @@ const SignUp = () => {
       <div className="flex flex-col items-center">
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="card-body lg:w-[30%] border"
+          className="card-body lg:w-[30%] border rounded-md"
         >
           <h2 className="text-center text-2xl md:text-3xl font-bold">
             Sign Up
@@ -75,7 +75,7 @@ const SignUp = () => {
             <input
               type="text"
               placeholder="name"
-              className="input input-bordered rounded-none"
+              className="input input-bordered rounded-md"
               {...register("fullName", { required: true })}
             />
             {errors.fullName && (
@@ -89,7 +89,7 @@ const SignUp = () => {
             <input
               type="email"
               placeholder="email"
-              className="input input-bordered rounded-none"
+              className="input input-bordered rounded-md"
               {...register("email", { required: true })}
             />
             {errors.email && (
@@ -103,7 +103,7 @@ const SignUp = () => {
             <input
               type="text"
               placeholder="photo url"
-              className="input input-bordered rounded-none"
+              className="input input-bordered rounded-md"
               {...register("image")}
             />
           </div>
@@ -111,7 +111,7 @@ const SignUp = () => {
             <label className="label">
               <span className="label-text">Password</span>
             </label>
-            <label className="input input-bordered rounded-none flex items-center gap-2">
+            <label className="input input-bordered rounded-md flex items-center gap-2">
               <input
                 type={showPassword ? "text" : "password"}
                 placeholder="password"
@@ -134,7 +134,7 @@ const SignUp = () => {
             )}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-none ">
+            <button className="btn bg-[#38B2AC] text-white hover:text-black rounded-md ">
               Register
             </button>
           </div>

@@ -53,7 +53,7 @@ const CategorySinglePage = () => {
               </div>
               <h2 className="card-title">{data.item_name}</h2>
               <p className="flex">{data.subcategory_Name}</p>
-              <p className="text-left">{data.description}</p>
+              <p className="text-left">{data.description.slice(0, 100)}</p>
               <p className="flex">Customization: {data.customization}</p>
               <p className="flex">Stock Status: {data.stock_status}</p>
               <p className="text-left">
