@@ -86,10 +86,10 @@ const MyartandCraft = () => {
               <a>All</a>
             </li>
             <li onClick={() => handleCustomization('yes')}>
-              <a>Customizable</a>
+              <a>Yes</a>
             </li>
             <li onClick={()=> handleCustomization('no')}>
-              <a>Not Customizable</a>
+              <a>No</a>
             </li>
           </ul>
         </div>
