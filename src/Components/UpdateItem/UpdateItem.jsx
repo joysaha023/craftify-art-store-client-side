@@ -71,7 +71,7 @@ const UpdateItem = () => {
                 type="text"
                 id="image"
                 name="image"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
@@ -84,7 +84,7 @@ const UpdateItem = () => {
                 id="item_name"
                 name="item_name"
                 defaultValue={product.item_name}
-                className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 pl-1 block p-2 outline-none w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
@@ -95,7 +95,7 @@ const UpdateItem = () => {
               <select
                 id="subcategory_name"
                 name="subcategory_name"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               >
                 <option value="">Select Subcategory</option>
@@ -116,7 +116,7 @@ const UpdateItem = () => {
               <textarea
                 id="short_description"
                 name="short_description"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               ></textarea>
             </div>
@@ -130,7 +130,7 @@ const UpdateItem = () => {
                 name="price"
                 defaultValue={product.price}
                 min="0"
-                className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 pl-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
@@ -146,7 +146,7 @@ const UpdateItem = () => {
                 min="0"
                 max="5"
                 step="0.1"
-                className="mt-1 pl-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 pl-1 block p-2 outline-none w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
@@ -157,7 +157,7 @@ const UpdateItem = () => {
               <select
                 id="customization"
                 name="customization"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               >
                 <option value="">Select Customization</option>
@@ -174,7 +174,7 @@ const UpdateItem = () => {
                 id="processing_time"
                 
                 name="processing_time"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full p-2 outline-none rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               />
             </div>
@@ -185,7 +185,7 @@ const UpdateItem = () => {
               <select
                 id="stock_status"
                 name="stock_status"
-                className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                className="mt-1 block w-full rounded-md p-2 outline-none border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                 required
               >
                 <option value="">Select Stock Status</option>
@@ -196,7 +196,7 @@ const UpdateItem = () => {
             <div className="mb-4">
               <button
                 type="submit"
-                className="w-full bg-[#38B2AC] text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
+                className="w-full bg-[#38B2AC]  text-white py-2 px-4 rounded-md hover:bg-indigo-600 transition duration-200"
               >
                 Update Items
               </button>

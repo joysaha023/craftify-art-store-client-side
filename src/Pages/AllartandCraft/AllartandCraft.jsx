@@ -22,7 +22,7 @@ const AllartandCraft = () => {
         setTimeout(() => {
           setallItems(fetchedData);
           setIsLoading(false);
-        }, 2000); // 5 seconds in milliseconds - 3000 for API delay + 2000 minimum loading time
+        }, 1000); // 5 seconds in milliseconds - 3000 for API delay + 2000 minimum loading time
       } catch (error) {
         console.error('Error fetching data:', error);
       }

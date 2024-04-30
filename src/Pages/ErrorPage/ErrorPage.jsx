@@ -17,7 +17,7 @@ const ErrorPage = () => {
       <h2 className="text-3xl mt-10 lg:text-6xl font-bold text-red-500">404</h2>
       <h2 className="text-4xl mt-10 lg:text-7xl font-bold text-red-500">Page Not Found</h2>
       <p className="text-lg my-6 lg:text-3xl font-medium text-gray-400">Sorry, we couldn't find the page.</p>
-      <Link to={"/"} className="btn bg-[#0077be] text-white hover:text-black">Go to Home</Link>
+      <Link to={"/"} className="btn bg-[#38B2AC] text-white hover:text-black">Go to Home</Link>
     </div>
   );
 };
