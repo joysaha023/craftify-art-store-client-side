@@ -5,11 +5,11 @@ This website where you can find art, paint and you also add your art and craft i
 Live Site URL: [CraftiFY](https://craftify-art-store.web.app/)
 
 <a href="https://craftify-art-store.web.app">
-  <img src="https://github.com/programming-hero-web-course-4/B9A10-client-side-joysaha023/blob/main/demo-1.png" />
+  <img src="https://github.com/joysaha023/craftify-art-store-client-side/blob/main/demo-1.png" />
 </a>
 
 <a href="https://craftify-art-store.web.app">
-  <img src="https://github.com/programming-hero-web-course-4/B9A10-client-side-joysaha023/blob/main/demo-2.png" />
+  <img src="https://github.com/joysaha023/craftify-art-store-client-side/blob/main/demo-2.png" />
 </a>
 
 
