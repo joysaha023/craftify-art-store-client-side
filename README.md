@@ -35,27 +35,16 @@ Live Site URL: [CraftiFY](https://craftify-art-store.web.app/)
 - Navbar with link are only 2 sections are public home and all art & craft these 2 sections is public and anyone can visit.
 - Slider with some popular art and craft image which have art and craft name and this is automatically slide.
 - Art and Craft item section where only 6 popular data of user added on our website these are show in card.
-- Art and Craft Category section this only show how many category available in our website and when user clicked single category these will show category wise data.
-- Our Gallery section this only some photo of popular art and craft image.
-- Contact Us section where use can contact our admin panel submit this form data.
 - Footer this footer section is rendered all pages with navbar item.
-
-### Private Section
-- Add art and craft section and my art and craft section is private user can access when user only logged in website.
-- Every art and craft data has a view details button and its render to details page which is also private.
-- User info and profile section are also private.
 
 ### Responsive
 - The entire website responsive
 
-### Characteristics
-- User can find unique art and craft idea from our website.
-- User can add their art and craft in our website and show his talent.
-- User can also edit and delete data which have he/she added on our website.
-- User can also find a data charecterwise and my list customizable.
-- User can also get a idea from view details page where artiest share their idea.
+### If you clone my projects
+- Open cmd and run git clone command
+- copy my repo clone from my repository
+- and run this link on git clone command
+- install node packeage npm install
+- run this project on yout pc npm run dev command
 
-## Npm Packages
-- [Swiper Slider](https://swiperjs.com)
-- [Lottie React](https://www.npmjs.com/package/lottie-react)
-- [React Tooltip](https://react-tooltip.com)
+
