@@ -27,7 +27,6 @@ Live Site URL: [CraftiFY](https://craftify-art-store.web.app/)
 
 ### User Authentication and Permissions
 - Registered User: Registered user access all features.
-- Non Registered User: Non Registered user can't access all features.
 - Registration Field: name, email, photoUrl, password. password is also verification added minimum 6 carectar required.
 - Login Field: user can login with registered email and password and also can signup google and github.
 
@@ -45,6 +44,6 @@ Live Site URL: [CraftiFY](https://craftify-art-store.web.app/)
 - copy my repo clone from my repository
 - and run this link on git clone command
 - install node packeage npm install
-- run this project on yout pc npm run dev command
+- run this project
 
 
